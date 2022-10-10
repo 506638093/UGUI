@@ -683,13 +683,11 @@ namespace UnityEngine.UI
                         m_MaterialDirty = false;
                     }
                     break;
-#if OPTIMIZE_UGUI
-                //HuaHua.
-                case CanvasUpdate.Prelayout:
-                    m_LayoutDirty = false;
-                    break;
-#endif
             }
+#if OPTIMIZE_UGUI
+            //HuaHua.
+            m_LayoutDirty = false;
+#endif
         }
 
         public virtual void LayoutComplete()
